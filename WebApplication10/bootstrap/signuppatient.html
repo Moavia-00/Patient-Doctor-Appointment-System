@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login page</title>
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+
+<body>
+
+    <div id="exampleModal ">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title  font-weight-bolder" id="exampleModalLabel">Patient Signup Form</h3>
+
+                </div>
+
+                <div class="container">
+
+
+                    <div class="row mt-md-4">
+                        <div class="col-md-4 ">
+                            <div class="form-group"><label for="names">Full Name <span style="color: red;">
+                *</span></label> <input type="text" id="names" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="father-nme"> Father's Name <span style="color: red;">
+                *</span></label> <input type="text" id="father-nme" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="cnic"> CNIC <span style="color: red;">
+                *</span></label> <input type="text" id="cnic" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                    <div class="row mt-md-1">
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="sub-city">City <span style="color: red;">
+                *</span></label> <select class="select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" data-select2-id="13">
+
+              <optgroup label="Hasilpur" data-select2-id="89">
+                <option value="5ffdccec-3a81-453e-b2c1-170b58e3ddb4" data-select2-id="90">Hasilpur </option>
+              </optgroup>
+              <optgroup label="Hujra Shah Muqeem" data-select2-id="91">
+                <option value="a5e20621-e75a-4ab1-a49b-5e0559b4557f" data-select2-id="92">Hujra Shah Muqeem
+                </option>
+              </optgroup>
+              <optgroup label="Hyderabad" data-select2-id="93">
+                <option value="2580c2f1-be49-4be1-b46c-f3916bd8375a" data-select2-id="94">Hyderabad </option>
+              </optgroup>
+              <optgroup label="Islamabad" data-select2-id="95">
+                <option value="854b0be2-c630-4dd2-80b3-19662a47fa4d" data-select2-id="96">Islamabad Blue Area
+                  Bewal </option>
+                <option value="cce444aa-f49e-4052-87b8-a4f61f4fea6c" data-select2-id="97">Islamabad Blue Area
+                  Shan </option>
+                <option value="e874cd6a-a37a-4bbe-b5fd-e34506a19bb0" data-select2-id="98">Islamabad Main
+                </option>
+              </optgroup>
+              <optgroup label="Jahanian" data-select2-id="99">
+                <option value="7e15e3c3-8054-4945-86e3-3212768180e2" data-select2-id="100">Jahanian </option>
+              </optgroup>
+              <optgroup label="Jalal Pur Jattan" data-select2-id="101">
+                <option value="7a9f603f-157c-471e-99e8-e7deb3773cc3" data-select2-id="102">Jalal Pur Jattan
+                </option>
+              </optgroup>
+              <optgroup label="Jalal Pur Pirwala" data-select2-id="103">
+                <option value="f49fff02-6b5c-4435-a765-9761703ebbe0" data-select2-id="104">Jalal Pur Pirwala
+                </option>
+              </optgroup>
+              <optgroup label="Jampur" data-select2-id="105">
+                <option value="276018b1-6265-4f28-980d-33a8dcee98c4" data-select2-id="106">Jampur </option>
+              </optgroup>
+              <optgroup label="Jand" data-select2-id="107">
+                <option value="701a385b-97cc-4418-a908-4567ee8d42b9" data-select2-id="108">Jand </option>
+              </optgroup>
+              <optgroup label="Jarranwala" data-select2-id="109">
+                <option value="5fe3bfd6-e7bb-4bf8-a99c-4c21f740cfa5" data-select2-id="110">Jarranwala </option>
+              </optgroup>
+              <optgroup label="Jauharabad" data-select2-id="111">
+                <option value="f50fa990-4474-452b-a3d8-6bf514a0b770" data-select2-id="112">Jauharabad </option>
+              </optgroup>
+              <optgroup label="Jehlum" data-select2-id="113">
+                <option value="cac7aaca-a7ff-4ea4-893e-7cce500133e5" data-select2-id="114">Jehlum </option>
+              </optgroup>
+              <optgroup label="Jhang" data-select2-id="115">
+                <option value="c453cf0b-9445-4108-9f4c-dfcc13d6c925" data-select2-id="116">Jhang </option>
+              </optgroup>
+              <optgroup label="Kabirwala" data-select2-id="117">
+                <option value="f3d64fb6-5fcd-4f20-bc41-ee50277e762a" data-select2-id="118">Kabirwala </option>
+              </optgroup>
+              <optgroup label="Kahna" data-select2-id="119">
+                <option value="dca56106-cebc-4725-b522-68ecbc3e09ec" data-select2-id="120">Kahna</option>
+              </optgroup>
+              <optgroup label="Kahuta" data-select2-id="121">
+                <option value="f499a998-55d9-4a4b-9e7d-a96967bf2540" data-select2-id="122">Kahuta</option>
+              </optgroup>
+              <optgroup label="Kallar Syedan" data-select2-id="123">
+                <option value="6e425f29-6dee-4a13-9d8e-609acac2d139" data-select2-id="124">Kallar Syedan
+                </option>
+              </optgroup>
+              <optgroup label="Kaloor Kot" data-select2-id="125">
+                <option value="2223174e-c4b8-4ad4-be1f-b96f7e630594" data-select2-id="126">Kaloor Kot </option>
+              </optgroup>
+              <optgroup label="Kamoke" data-select2-id="127">
+                <option value="565a02a7-685b-4f59-b029-5dc8f7003a8c" data-select2-id="128">Kamoke </option>
+              </optgroup>
+              <optgroup label="Kasur" data-select2-id="129">
+                <option value="7381f0f7-18be-4f88-9f14-e55878fa567e" data-select2-id="130">Kasur </option>
+              </optgroup>
+              <optgroup label="Khanewal" data-select2-id="131">
+                <option value="25f4b03b-6983-4659-aeab-404db65f7c00" data-select2-id="132">Khanewal </option>
+              </optgroup>
+              <optgroup label="Khan Pur" data-select2-id="133">
+                <option value="6e8d3e10-105a-4989-b51b-0a13380de646" data-select2-id="134">Khan Pur </option>
+              </optgroup>
+              <optgroup label="Kharian" data-select2-id="135">
+                <option value="854b467a-c73a-4d0f-8cc8-c720029774d8" data-select2-id="136">Kharian </option>
+              </optgroup>
+              <optgroup label="Kot Addu" data-select2-id="137">
+                <option value="a9e72e03-3cf6-4525-a015-47845dc5e9a0" data-select2-id="138">Kot Addu </option>
+              </optgroup>
+              <optgroup label="Kotli" data-select2-id="139">
+                <option value="e1e898e3-3e68-424c-b982-482b00a0b492" data-select2-id="140">Kotli </option>
+              </optgroup>
+              <optgroup label="Lahore" data-select2-id="141">
+                <option value="997163e8-d1cb-4577-830c-3f367fe94e99" data-select2-id="142">Lahore City Campus
+                </option>
+                <option value="9c0a2c81-5a47-4c77-9fa3-7a5c390d17c7" data-select2-id="143">Lahore College Road
+                </option>
+                <option value="580faac3-cdc4-4cfe-b477-33b7a9a18088" data-select2-id="144">Lahore Johar Town
+                </option>
+                <option value="e4394366-215e-42c6-b868-7be3e2fc4b53" data-select2-id="145">Lahore Main </option>
+                <option value="23bd3919-27bf-44bb-9796-53e03a05f454" data-select2-id="146">Lahore Shalimar
+                </option>
+              </optgroup>
+              <optgroup label="Lahore Bahria Town" data-select2-id="147">
+                <option value="52c405cb-261e-4e3a-a3a6-9fd94f3469af" data-select2-id="148">Lahore Bahria Town
+                </option>
+              </optgroup>
+              <optgroup label="Lahore Paragon City (Defense Campus)" data-select2-id="149">
+                <option value="0907553c-5deb-42a9-a8bf-cd66110c1892" data-select2-id="150">Lahore Paragon City
+                  (Defence Campus)</option>
+              </optgroup>
+              <optgroup label="Lahore Shalimar II" data-select2-id="151">
+                <option value="9d8b577f-1db6-43e5-94da-c3643e5014bb" data-select2-id="152">Lahore Shalimar
+                  Campus II (Taj Bagh)</option>
+              </optgroup>
+              <optgroup label="Lala Musa" data-select2-id="153">
+                <option value="022a524b-4782-4af3-a313-3b3ba1d59df2" data-select2-id="154">Lala Musa </option>
+              </optgroup>
+              <optgroup label="Layyah" data-select2-id="155">
+                <option value="dae6d75d-94fe-4197-adff-2762c33caea4" data-select2-id="156">Layyah </option>
+              </optgroup>
+              <optgroup label="Liaqat Pur" data-select2-id="157">
+                <option value="324c2477-3ca2-4d80-815f-791822bc545d" data-select2-id="158">Liaqat Pur </option>
+              </optgroup>
+              <optgroup label="Lodhran" data-select2-id="159">
+                <option value="80db46e0-27dc-452a-b6fb-262e2fcc95b1" data-select2-id="160">Lodhran </option>
+              </optgroup>
+              <optgroup label="Mailsi" data-select2-id="161">
+                <option value="69fff22f-1048-4e3b-8417-569f60863e51" data-select2-id="162">Mailsi </option>
+              </optgroup>
+              <optgroup label="Malakwal" data-select2-id="163">
+                <option value="52b44ada-8c10-4d70-ba94-140514d2fabf" data-select2-id="164">Malakwal</option>
+              </optgroup>
+              <optgroup label="Mandi Bahaudin" data-select2-id="165">
+                <option value="a1d804e8-c058-486b-bd19-6eafece2a3ef" data-select2-id="166">Mandi Bahaudin
+                </option>
+              </optgroup>
+              <optgroup label="Mansehra" data-select2-id="167">
+                <option value="8ab1ccb7-3380-4102-9a1f-d07b9ec8ff3e" data-select2-id="168">Mansehra </option>
+              </optgroup>
+              <optgroup label="Mardan" data-select2-id="169">
+                <option value="f757115d-29ec-480f-9a10-34a70df51a8a" data-select2-id="170">Mardan </option>
+              </optgroup>
+              <optgroup label="Mian Channu" data-select2-id="171">
+                <option value="9cdb5c66-3360-45d7-8bbe-7948e093df5a" data-select2-id="172">Mian Channu </option>
+              </optgroup>
+              <optgroup label="Mianwali" data-select2-id="173">
+                <option value="2f783594-717d-4291-b492-4f523410d938" data-select2-id="174">Mianwali </option>
+              </optgroup>
+              <optgroup label="Mirpur" data-select2-id="175">
+                <option value="6f9fe7a6-2379-4267-8341-e761aa3aed12" data-select2-id="176">Mirpur </option>
+              </optgroup>
+              <optgroup label="Multan" data-select2-id="177">
+                <option value="ce57ad7d-6737-46b9-b9d4-579111ff937c" data-select2-id="178">Multan </option>
+              </optgroup>
+              <optgroup label="Muzaffargarh" data-select2-id="179">
+                <option value="701e9aa2-a024-4c68-8420-d55cc2be0eac" data-select2-id="180">Muzaffargarh
+                </option>
+              </optgroup>
+              <optgroup label="Nankana Sahib" data-select2-id="181">
+                <option value="7b658236-eeb5-4536-ad62-973eecc7295b" data-select2-id="182">Nankana Sahib
+                </option>
+              </optgroup>
+              <optgroup label="Narowal" data-select2-id="183">
+                <option value="bedc81f7-d25f-4c5c-a0cc-a33754e25b36" data-select2-id="184">Narowal </option>
+              </optgroup>
+              <optgroup label="Noushehra (Soon Val)" data-select2-id="185">
+                <option value="f310235c-e324-49d5-8efd-9875288bc5b9" data-select2-id="186">Noushehra (Soon
+                  Valley) </option>
+              </optgroup>
+              <optgroup label="Nowshera" data-select2-id="187">
+                <option value="422ed9f8-348c-4307-960e-15df1e201bfe" data-select2-id="188">Nowshera</option>
+              </optgroup>
+              <optgroup label="Okara" data-select2-id="189">
+                <option value="1bc15e50-4375-46a7-a4ef-10342e858c3b" data-select2-id="190">Okara </option>
+              </optgroup>
+              <optgroup label="Pakpattan" data-select2-id="191">
+                <option value="9f201230-b2ac-4cc5-9810-83de83ce86a1" data-select2-id="192">Pakpattan </option>
+              </optgroup>
+              <optgroup label="Pasroor" data-select2-id="193">
+                <option value="24d0f5f1-33df-4a90-b202-18472f05a021" data-select2-id="194">Pasroor </option>
+              </optgroup>
+              <optgroup label="Pattoki" data-select2-id="195">
+                <option value="4dc612ac-b1d9-466f-8e38-031887c5af25" data-select2-id="196">Pattoki </option>
+              </optgroup>
+              <optgroup label="Peshawar" data-select2-id="197">
+                <option value="f7c2c187-31f7-443b-b454-2b36fe4a50b2" data-select2-id="198">Peshawar</option>
+              </optgroup>
+              <optgroup label="Phalia" data-select2-id="199">
+                <option value="501aec20-a50b-44b2-85d5-06d0688f49c9" data-select2-id="200">Phalia </option>
+              </optgroup>
+              <optgroup label="Phool Nagar" data-select2-id="201">
+                <option value="a22eebf7-ec6f-4756-9be7-0543ac9b8469" data-select2-id="202">Phool Nagar</option>
+              </optgroup>
+              <optgroup label="Pind Dadan Khan" data-select2-id="203">
+                <option value="5d37bbb4-69b9-4e89-a70d-603d81d2eb04" data-select2-id="204">Pind Dadan Khan
+                </option>
+              </optgroup>
+              <optgroup label="Pindi Bhattian" data-select2-id="205">
+                <option value="6a36e243-9dc1-450c-b879-c7c29b2d538a" data-select2-id="206">Pindi Bhattian
+                </option>
+              </optgroup>
+              <optgroup label="Piplan" data-select2-id="207">
+                <option value="66b2c9fd-48c4-4aee-8b06-750fed7b9328" data-select2-id="208">Piplan </option>
+              </optgroup>
+              <optgroup label="Pir Mahal" data-select2-id="209">
+                <option value="6c72cbf1-29c7-4fa4-bdde-cedbf7e1192e" data-select2-id="210">Pir Mahal </option>
+              </optgroup>
+              <optgroup label="Qila Didar Singh" data-select2-id="211">
+                <option value="b0c4874d-4dcf-4633-abd5-4510c050804b" data-select2-id="212">Qila Didar Singh
+                </option>
+              </optgroup>
+              <optgroup label="Quaidabad" data-select2-id="213">
+                <option value="686787c4-2e24-40b5-a28d-fb9a7aa37163" data-select2-id="214">Quaidabad </option>
+              </optgroup>
+              <optgroup label="Rahim Yar Khan" data-select2-id="215">
+                <option value="89fd8587-371d-4866-9538-0820a0d94e50" data-select2-id="216">Rahim Yar Khan
+                </option>
+              </optgroup>
+              <optgroup label="Raiwind" data-select2-id="217">
+                <option value="cab60013-8427-48a5-bc79-f681f16876fb" data-select2-id="218">Raiwind </option>
+              </optgroup>
+              <optgroup label="Rawalakot" data-select2-id="219">
+                <option value="3a2b92d3-334a-4d2d-ae2f-8730749aef11" data-select2-id="220">Rawalakot </option>
+              </optgroup>
+              <optgroup label="Rawalpindi" data-select2-id="221">
+                <option value="e9233ae0-07d9-4a30-9e85-3120ffc05a76" data-select2-id="222">Rawalpindi Ayub Park
+                </option>
+                <option value="e57c4a3a-f015-4e70-8155-a8af37fefc22" data-select2-id="223">Rawalpindi Cantt
+                </option>
+                <option value="addf5612-785e-470a-bd7b-b325f2238cf0" data-select2-id="224">Rawalpindi D-Nine
+                </option>
+                <option value="2c207eff-6a22-4229-aa24-a838187dda57" data-select2-id="225">Rawalpindi Main
+                </option>
+                <option value="1a0548b3-4356-4e04-b5a5-401b4742de71" data-select2-id="226">Rawalpindi Quaid
+                </option>
+                <option value="0aee9403-4215-404b-9c7a-fb55f3f38582" data-select2-id="227">Rawalpindi Sixth Road
+                </option>
+              </optgroup>
+              <optgroup label="Sadiqabad" data-select2-id="228">
+                <option value="57ece0c9-b335-407e-9c01-bb2fa6f75f97" data-select2-id="229">Sadiqabad </option>
+              </optgroup>
+              <optgroup label="Sahiwal" data-select2-id="230">
+                <option value="1b06dcdf-ccf2-4fdf-9393-d8d93a6d398f" data-select2-id="231">Sahiwal </option>
+              </optgroup>
+              <optgroup label="Sahiwal (SGD)" data-select2-id="232">
+                <option value="b07e6cd8-42f8-485d-a225-45c4a266d8b2" data-select2-id="233">Sahiwal (SGD)
+                </option>
+              </optgroup>
+              <optgroup label="Saidpur Khichian (Sialkot)" data-select2-id="234">
+                <option value="86aa121b-7efb-438a-87f7-43e03f8abb80" data-select2-id="235">Rahimpur Khichian
+                  (Sialkot)</option>
+                <option value="b2fa414d-cd2a-4eba-9129-ab25683f9fd6" data-select2-id="236">Saidpur Khichian
+                  (Sialkot)</option>
+              </optgroup>
+              <optgroup label="Sambrial" data-select2-id="237">
+                <option value="82d31daa-52dd-4180-9d6f-4086b4c614e7" data-select2-id="238">Sambrial </option>
+              </optgroup>
+              <optgroup label="Samundri" data-select2-id="239">
+                <option value="a810910a-e180-413d-89c5-8a7778b6e699" data-select2-id="240">Samundari </option>
+              </optgroup>
+              <optgroup label="Sargodha" data-select2-id="241">
+                <option value="228d1190-3bd9-4fe4-9b5e-8ad87331e88e" data-select2-id="242">Sargodha </option>
+              </optgroup>
+              <optgroup label="Shahdra" data-select2-id="243">
+                <option value="7169fa8b-4cf7-4b68-a838-6737bed914cc" data-select2-id="244">Shahdra </option>
+              </optgroup>
+              <optgroup label="Shahkot" data-select2-id="245">
+                <option value="28069991-467d-43d6-867a-5015f6298e40" data-select2-id="246">Shahkot </option>
+              </optgroup>
+              <optgroup label="Shakargarh" data-select2-id="247">
+                <option value="d28f26c3-d5a9-4e8b-b61e-b0c60c99b210" data-select2-id="248">Shakargarh </option>
+              </optgroup>
+              <optgroup label="Sharaqpur" data-select2-id="249">
+                <option value="5eab8f13-48fb-4d83-b452-5e70742c1d12" data-select2-id="250">Sharaqpur </option>
+              </optgroup>
+              <optgroup label="Sheikhupura" data-select2-id="251">
+                <option value="6944f103-caa7-4f29-b3f2-a1eeef490e55" data-select2-id="252">Sheikhupura </option>
+              </optgroup>
+              <optgroup label="Shorkot" data-select2-id="253">
+                <option value="df966487-b5e8-4f50-a2a8-f8fe0a08380e" data-select2-id="254">Shorkot </option>
+              </optgroup>
+              <optgroup label="Shujabad" data-select2-id="255">
+                <option value="2aa580ce-e094-47e5-aeaf-e62e7fff32cb" data-select2-id="256">Shujabad </option>
+              </optgroup>
+              <optgroup label="Sialkot" data-select2-id="257">
+                <option value="7e493233-45e7-4c40-a1db-681e8f07eedb" data-select2-id="258">Sialkot </option>
+              </optgroup>
+              <optgroup label="Tala Gang" data-select2-id="259">
+                <option value="c6bfd98a-40f8-4f9c-ae59-3782d58f2ac5" data-select2-id="260">Tala Gang </option>
+              </optgroup>
+              <optgroup label="Tandlianwala" data-select2-id="261">
+                <option value="1ec7c2c0-f88b-4707-b63b-584f0065c1ae" data-select2-id="262">Tandlianwala
+                </option>
+              </optgroup>
+              <optgroup label="Toba Tek Singh" data-select2-id="263">
+                <option value="adad86db-aee9-4e34-acdb-75278f329472" data-select2-id="264">Toba Tek Singh
+                </option>
+              </optgroup>
+              <optgroup label="Tounsa Shareef" data-select2-id="265">
+                <option value="1f012e08-c19a-4fc3-8983-7dfa6b71e6fb" data-select2-id="266">Tounsa Shareef
+                </option>
+              </optgroup>
+              <optgroup label="Vehari" data-select2-id="267">
+                <option value="33f740a2-1cb2-4d82-a432-a48ddeefb03b" data-select2-id="268">Vehari </option>
+              </optgroup>
+              <optgroup label="Wah Cantt" data-select2-id="269">
+                <option value="17043d78-a00e-46f9-9d28-f97531f35447" data-select2-id="270">Wah Cantt </option>
+              </optgroup>
+              <optgroup label="Wazirabad" data-select2-id="271">
+                <option value="a2992571-925b-4fe8-b688-7224fa7530a3" data-select2-id="272">Wazirabad </option>
+              </optgroup>
+              <optgroup label="Zafarwal" data-select2-id="273">
+                <option value="1fb338d5-34ea-4826-bb53-7096329fd2cb" data-select2-id="274">Zafarwal </option>
+              </optgroup>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="14" style="width: 100%;"><span class="selection"><span
+                  class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                  aria-expanded="false" tabindex="0" aria-disabled="false"
+                  aria-labelledby="select2-354w-container"><span class="select2-selection__rendered"
+                    id="select2-354w-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b
+                      role="presentation"></b></span></span>
+                                </span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="father-cnic">Date of Birth<span style="color: red;">
+                *</span></label> <input type="date" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label>Gender<span style="color: red;">
+                *</span></label> <select class="select2-hidden-accessible" style="width: 100%;" tabindex="-1" aria-hidden="true" data-select2-id="275">
+              <option value="69e47004-9c98-46dc-bbea-b159505c7fa5" data-select2-id="277">Male</option>
+              <option value="abd27c3b-cf47-4b05-8629-bf5ec0cd44b9" data-select2-id="278">Female</option>
+              <option value="abd27c3b-cf47-4b05-8629-bf5ec0cd44b1" data-select2-id="279">Other</option>
+            </select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="276" style="width: 100%;"><span class="selection"><span
+                  class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true"
+                  aria-expanded="false" tabindex="0" aria-disabled="false"
+                  aria-labelledby="select2-dq7q-container"><span class="select2-selection__rendered"
+                    id="select2-dq7q-container" role="textbox" aria-readonly="true"></span><span class="select2-selection__arrow" role="presentation"><b
+                      role="presentation"></b></span></span>
+                                </span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3 class="heading">Contact Info</h3>
+                            <div class="mt-md-2 text-danger"> Please enter your correct phone number and email address as this will be used to communicate your medical history to doctor and lab results.</div>
+                        </div>
+                    </div>
+                    <div class="row mt-md-3">
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="mobile-no">Mobile No. <span style="color: red;">
+                *</span></label> <input type="text" class="form-control form-control-solid" style="border-radius: 0.35rem;">
+                                <div class="invalid-feedback" style="display: none;">
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="father-email">Email <span style="color: red;">
+                *</span></label> <input type="email" id="father-email" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="postal-address">Address <span style="color: red;">
+                    *</span></label></label> <input type="text" id="postal-address" class="form-control form-control-solid"></div>
+                        </div>
+                    </div>
+
+
+
+
+
+                    <div class="row mt-md-3">
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="mobile-no">Age <span style="color: red;">
+          *</span></label> <input type="number" class="form-control form-control-solid" style="border-radius: 0.35rem;">
+                                <div class="invalid-feedback " style="display: none;">
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="father-email">Password <span style="color: red;">
+          *</span></label> <input type="password" id="father-email" class="form-control form-control-solid">
+                                <div class="invalid-feedback" style="display: none;"><span>Required Field</span>
+                                    <!---->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group"><label for="postal-address">Confirm Password <span style="color: red;">
+              *</span></label></label> <input type="password" id="postal-address" class="form-control form-control-solid"></div>
+                        </div>
+                    </div>
+                    <div class="modal-footer mt-md-5">
+                        <a href="index.html" class="btn btn-secondary text-white">Back</a>
+
+                        <a href="index.html" class="btn btn-primary text-white">Submit</a>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+            </div>
+</body>
+
+</html>

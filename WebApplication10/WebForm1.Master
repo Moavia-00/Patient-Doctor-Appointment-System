@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.Master.cs" Inherits="WebApplication10.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+   
+    <title>Login page</title>
+     <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+   <link href="bootstrap/bootstrap.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet"/>
+       <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap/bootstrap.css">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/yourcode.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .iconn{
+            color: rgb(21, 127, 218);
+        }
+        .iconn:hover{
+            color: rgb(47, 140, 223);
+        }
+        .preloader {
+    background-image:url('images/slider-bg.jpg');
+    background-repeat:no-repeat;
+    background-size:100%;
+    width:auto;
+    height:auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position:fixed;
+    overflow-y:scroll;
+    
+}
+    </style>
+</head>
+
+
+    <script>
+        var global_variable = "doctor";
+        var val1 = 0;
+
+
+        function textchange(a) {
+            if (a == 1) {
+                document.getElementById('text').innerHTML = "Hello Doctor!";
+
+
+                var x = document.getElementById('tick').innerHTML("!");
+
+            } else if (a == 2) {
+                document.getElementById('text').innerHTML = "Hello Patient!";
+
+            }
+            else if (a == 3) {
+                document.getElementById('text').innerHTML = "Hello Lab Attendent!";
+
+            }
+
+        }
+
+        function JSalert(x) {
+
+            if (x == 1) {
+                window.global_variable = document.getElementById('doctor').getAttribute('value');
+
+                swal("Mode Changed!", " You Are In Doctor Mode!", "success");
+            } else if (x == 2) {
+                window.global_variable = document.getElementById('patient').getAttribute('value');
+
+                swal("Mode Changed!", " You Are In Patient Mode!", "success");
+            }
+            else if (x == 3) {
+
+                window.global_variable = document.getElementById('lab').getAttribute('value');
+
+                swal("Mode Changed!", " You Are In Lab Attendent Mode!", "success");
+            }
+
+
+        }
+
+        function openpage() {
+
+            if (window.global_variable == "patient") {
+                window.open("patientsignup.aspx");
+            } else if (window.global_variable == "doctor") {
+                window.open("doctorsignup.aspx");
+            }
+            else if (window.global_variable == "lab") {
+                window.open("labsignup.aspx");
+            }
+
+        }
+
+        function changepassword() {
+
+            if (window.global_variable == "patient") {
+                window.open("patient_password_change.aspx");
+            } else if (window.global_variable == "doctor") {
+                window.open("doctor_password_change.aspx");
+            }
+            else if (window.global_variable == "lab") {
+                window.open("lab_password_change.aspx");
+            }
+
+        }
+
+        function checkform() {
+
+            var e = document.getElementById('cnic').value;
+            var p = document.getElementById('password').value;
+
+            if (p == "") {
+                swal("Please enter you Password");
+
+
+            } else if (e == "") {
+
+                swal("Please enter you Cnic");
+
+
+            }
+        }
+    </script>
+
+
+<body>
+    <form id="form1" runat="server" class="preloader"   >
+          
+         <div class="container py-5"  >
+        <div class="row">
+            <div class="col-md-12  ">
+
+                <h2  class="  text-center ml-md-5  font-weight-bold buggy" >
+                    <a href="" class="text-light" style="color:rgb(21, 127, 218)";> Select Account Type</a> </h2>
+
+            </div>
+        </div>
+             
+
+        <div class=" row mt-md-2" style="margin-left:215px;">
+
+
+            <div class=" col-md-3" onclick="textchange(1)">
+
+                <i id="doctor" value="doctor" class="iconn fa fa-user-md" style="font-size:280px" onclick="JSalert(1);"></i>
+               <%-- <img id="doctor" src="bootstrap/doctor.png" class="w-100" value="doctor" onclick="JSalert(1);" />--%>
+
+            </div>
+            
+            
+
+            <div class=" col-md-3" onclick="textchange(2)">
+                
+                <i id="patient" value="patient" class="mx-3 iconn fa fa-wheelchair" style="font-size:240px;margin-top:20px" onclick="JSalert(2);"></i>
+                <%--<img id="patient" src="bootstrap/patient (2).png " class="w-100" value="patient" onclick="JSalert(2);" />--%>
+
+            </div>
+
+            <div class= col-md-3 " onclick="textchange(3)">
+
+                <i id="lab" value="lab" class="mx-3 iconn fa fa-user-plus" style="font-size:230px;margin-top:30px" onclick="JSalert(3);"></i>
+                <%--<img id="lab" src="bootstrap/llab.jpg " class="w-100 h-100 " value="lab" onclick="JSalert(3);" />--%>
+
+            </div>
+
+    
+            </div>
+                 
+             
+        <div class="row">
+            <div class="col-12">
+                <p id="text" class="text-center font-italic font-weight-bolder mt-1 ml-5 " style="font-size:30px;color:rgb(21, 127, 218);" >
+                    Hello Doctor!
+                </p>
+                <%-- <asp:TextBox ID="mode" Text="dr" runat="server"></asp:TextBox>--%>
+                <p class="text-center font-weight-bold mt-n3 ml-5" style="color:rgb(21, 127, 218);">
+                    please fill out the form below to get started
+                </p>
+            </div>
+       </div>
+       
+
+            <div class="row ml-4">
+                <div class="col-md-4 input-group mb-3  offset-md-4  offset-lg-4">
+                    <div class="input-group-prepend ">
+                        <span class="input-group-text " id="basic-addon1"><i class=" fa fa-id-card" style="font-size:19px"></i></span>
+
+                    </div>
+                   <asp:TextBox ID="cnic"  placeholder="Enter Your Cnic"   class="form-control " runat="server"></asp:TextBox>
+                </div>
+            </div>
+
+            <div class="row ml-4">
+                <div class="col-md-4 input-group mb-3 offset-md-4 offset-lg-4">
+                    <div class="input-group-prepend ">
+                        <span class="input-group-text " id="basic-addon1"><i class="fa fa-unlock-alt bg-light" style="font-size:25px"></i></span>
+
+                    </div>
+                    <asp:TextBox ID="password" placeholder="Enter Your Password" TextMode="Password"  class="form-control form-control-solid" runat="server"></asp:TextBox>
+
+                </div>
+            </div>
+
+
+        <div class="row ml-5">
+
+
+            <div class="col-10 text-md-center font-italic font-weight-bold ml-lg-n3" style="color:rgb(21, 127, 218);">
+                No account? <a class="font-italic font-weight-bold" id="signuplink" href="#" onclick="openpage()">Signup</a>
+            </div>
+
+
+            <div class="col-11 text-md-center  font-italic font-weight-bold ml-lg-n2" style="color:rgb(21, 127, 218);">
+                Forget Password? <a href="#" onclick="changepassword()">Change Password</a>
+            </div>
+            <div class="col-4 text-md-center" style="margin-left:347px">
+                <asp:Button  class=" btn-primary btn btn-block" ID="login" runat="server"  Text="Login" OnClientClick="checkform()" OnClick="login_Click1"  />
+        </div>
+            <div class="col-4 text-md-center mt-2" style="margin-left:347px">
+<asp:LinkButton CssClass="btn-primary btn btn-block" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Back To Site</asp:LinkButton>
+                <%--<asp:Button class="btn btn-outline-primary btn-block" ID="Button1" runat="server"  Text="Back To Home" OnClientClick="checkform()" OnClick="login_Click1"  />--%>
+        </div>
+            </div>
+             
+
+    </div>
+        </div>
+    </form>
+    </body>
+</html>
